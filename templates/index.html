@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrapper">
+    <div class="container">
+        <h1 class="text-center mt-3">The Brown Bakers & Cafe.</h1>
+    </div>
+    <br/><br/><br/>
+
+    <div class="container">
+        <section class="content">
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-primary">
+                            <div class="card-header bg-primary">
+                                <h3 class="card-title text-white">Login</h3>
+                            </div>
+                            <form method="POST" action="/login">>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="">Email Address</label>
+                                        <input type="email" name="email" class="form-control" placeholder="Enter Email">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label for="">Password</label>
+                                        <input type="password" name="pass" class="form-control" placeholder="Enter Password">
+                                    </div>
+    
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">I agree to the <a href="#">terms of service</a></label>
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <span>New user?</span>
+                                        <a href="/signup">Register Here</a>
+                                    </div>
+                                </div>
+    
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+</div>
+
+{% endblock %}
