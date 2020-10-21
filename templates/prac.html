@@ -1,0 +1,152 @@
+{% extends "new.html" %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .border-transparent {
+    border-color: transparent!important;
+}
+
+.card-header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: .75rem 1.25rem;
+    position: relative;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.card-title {
+    float: left;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card-header>.card-tools {
+    float: right;
+    margin-right: -.625rem;
+}
+
+.btn-tool {
+    color: #adb5bd;
+    font-size: .875rem;
+    margin: -.75rem 0;
+    padding: .25rem .5rem;
+}
+
+  </style>
+{% endblock %}
+{% block content %} {% endblock %}
+{% block content1 %} {% endblock %}
+{% block content3 %}
+<h3>Add Data</h3>
+{% endblock %}
+{% block content4 %}
+<li class="breadcrumb-item active">Area</li>
+{% endblock %}
+{% block content5 %}
+
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Add Area</h3>
+        </div>
+
+        <div>
+            <div class="{{prop}}">
+                <span id="mess">{{data}}</span>
+            </div>
+        </div>
+
+        <form role="form" id="quickForm" action="/adddata" method="POST" onsubmit="return myfun()">
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Area</label> <input type="text" name="arealabel" class="form-control" id="area" placeholder="Enter Area" value="">
+                </div>
+
+
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="card" id="second">
+        <div class="card-header">
+            <h3 class="card-title">All Areas</h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" onclick="myfun()">
+                    <i class="fas fa-minus" id="minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove" onclick="myfun2()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table m-0" id="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                        <tbody id="tbody">
+                            {% for data in org_data %}
+                            <tr>
+                                <td>{{data.Id}}</td>
+                                <td>{{data.Name}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block content6 %}
+<!-- <script src="{{ url_for('static', filename='data.json') }}"></script> -->
+<script>
+
+    // fetch("data.json").then(function(resp){
+    //     return resp.json();
+    // })
+    // .then(function(data){
+    //     for(let i=1;i<data.length+1;i++){
+    //         document.getElementById("tbody").innerHTML="<tr><td>" + data[i].Id + "</td><td>" + data[i].Name +"</td><td>";
+    //     }
+    //     console.log(data);
+    // });
+
+    function myfun() {
+  var x = document.getElementById("table");
+  var id=document.getElementById("minus").className;
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+    document.getElementById("minus").className="fas fa-plus";
+  }
+  console.log(id);
+}
+
+function myfun2() {
+  var x = document.getElementById("second");
+  if (x.style.display !="none") {
+    x.style.display = "none";
+  } 
+}
+
+
+</script>
+
+{% endblock %}
