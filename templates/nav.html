@@ -1,0 +1,157 @@
+{% block content %}  {% endblock %}
+<nav id="sidebar">
+    <div class="sidebar-header">
+        <img src="http://skyevorms.us-east-2.elasticbeanstalk.com/dist/img/restaurantlogo.jpeg" class="img-circle elevation-2" alt="User Image" width="50px" height="50px">
+        <p class="text-white mt-3">{{email}}</p>
+        <hr class="bg-white" />
+    </div>
+
+    <ul class="list-unstyled components">
+        <li class="nav-item has-treeview menu-open"><a href="/" class="btn btn-primary nav-link active"> <i class="nav-icon fas fa-tachometer-alt"></i>
+            Dashboard
+        </a> 
+        </li>
+
+        <li class="nav-item has-treeview"><a href="#cussubmenu" data-toggle="collapse" aria-expanded="false" class="bg-dark text-white"><i class="nav-icon fas fa-edit"></i>
+                Customer Management <i class="fas fa-angle-left right"></i>
+        </a>
+        <ul class="collapse list-unstyled" id="cussubmenu">
+            <li>
+                <a href="{{url_for('Area')}}"> <i class="fas fa-circle" aria-hidden="true"></i> Area</i></a>
+            </li>
+            <li>
+                <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Executive</i></a>
+            </li>
+            <li>
+                <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Executive Details</i></a>
+            </li>
+
+            <li>
+                <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Customer</i></a>
+            </li>
+
+            <li>
+                <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Customer detail</i></a>
+            </li>
+
+            <li>
+                <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Record</i></a>
+            </li>
+        </ul>
+    </li>
+    <br/>
+    <li class="nav-item has-treeview"><a href="#pricesubmenu" data-toggle="collapse" aria-expanded="false" class="bg-dark text-white"><i class="nav-icon fas fa-edit"></i>
+        Price Management <i class="fas fa-angle-left" style="margin-left: 35px;"></i>
+</a>
+<ul class="collapse list-unstyled" id="pricesubmenu">
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Area</i></a>
+    </li>
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Executive</i></a>
+    </li>
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Executive Details</i></a>
+    </li>
+
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Customer</i></a>
+    </li>
+
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Customer detail</i></a>
+    </li>
+
+    <li>
+        <a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Record</i></a>
+    </li>
+</ul>
+</li>
+<br/>
+<li class="nav-item has-treeview"><a href="#paysubmenu" data-toggle="collapse" aria-expanded="false" class="bg-dark text-white"><i class="nav-icon fas fa-edit"></i>
+Payment Report <i class="fas fa-angle-left right" style="margin-left: 55px;"></i>
+</a>
+<ul class="collapse list-unstyled" id="paysubmenu">
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Area</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Executive</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Executive Details</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Customer</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Customer detail</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Record</i></a>
+</li>
+</ul>
+</li>
+<br/>
+<li class="nav-item has-treeview"><a href="#invsubmenu" data-toggle="collapse" aria-expanded="false" class="bg-dark text-white"><i class="nav-icon fas fa-edit"></i>
+Invoice <i class="fas fa-angle-left right" style="margin-left: 125px;"></i>
+</a>
+<ul class="collapse list-unstyled" id="invsubmenu">
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Area</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Executive</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Executive Details</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Customer</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Customer detail</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Record</i></a>
+</li>
+</ul>
+</li>
+
+<br/>
+<li class="nav-item has-treeview"><a href="#noticesubmenu" data-toggle="collapse" aria-expanded="false" class="bg-dark text-white"><i class="nav-icon fas fa-edit"></i>
+Notice <i class="fas fa-angle-left right" style="margin-left: 125px;"></i>
+</a>
+<ul class="collapse list-unstyled" id="noticesubmenu">
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Area</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Executive</i></a>
+</li>
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Executive Details</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Add Customer</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> View Customer detail</i></a>
+</li>
+
+<li>
+<a href="#"> <i class="fas fa-circle" aria-hidden="true"></i> Record</i></a>
+</li>
+</ul>
+</li>
+    </ul>
+
+</nav>
